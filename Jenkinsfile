@@ -8,7 +8,7 @@ pipeline {
                 //withMaven(maven : 'maven_3_6_3') {
                 def mvnHome = tool name: 'mvn', type: 'maven'
                     sh 'mvn clean compile'
-                //}
+                }
             }
         }
 
