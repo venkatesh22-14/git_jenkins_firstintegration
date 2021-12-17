@@ -32,7 +32,7 @@ pipeline {
             }
         }
         
-       stage ('Email Notification) {
+       stage ('Email Notification) {,
             
               steps {
                   post {
