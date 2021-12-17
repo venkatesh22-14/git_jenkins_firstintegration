@@ -33,7 +33,7 @@ pipeline {
         }
     }
 }
-}
+
 stage ('Email Notification) {
 steps {
 post {
@@ -45,3 +45,4 @@ post {
     }
   }
 }
+       }
