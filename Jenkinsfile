@@ -31,18 +31,20 @@ pipeline {
                 //}
             }
         }
-    }
-}
-
-stage ('Email Notification) {
-steps {
-post {
-    failure {
-      // The developer setting up this job can specify which group should receive an email when the build fails
-      mail to: "${srilakshmivenkatesh2214@gmail.com}",
-        subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-        body: "Something is wrong with ${env.BUILD_URL}"
-    }
-  }
-}
-       }
+        
+       stage ('Email Notification) {
+            
+              steps {
+                  post {
+                        failure {
+                              // The developer setting up this job can specify which group should receive an email when the build fails
+                              mail to: "${srilakshmivenkatesh2214@gmail.com}",
+                                subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                                body: "Something is wrong with ${env.BUILD_URL}"
+                        }
+                  }
+              }
+              }
+              }
+              }
+   
